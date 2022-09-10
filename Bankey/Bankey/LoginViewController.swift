@@ -12,6 +12,10 @@ protocol LoginViewControllerDelegate: AnyObject {
     func didLogin()
 }
 
+protocol LogoutDelegate: AnyObject {
+    func didLogout()
+}
+
 class LoginViewController: UIViewController {
     
     let titleLabel = UILabel()
@@ -35,6 +39,12 @@ class LoginViewController: UIViewController {
         style()
         layout()
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        signInButton.configuration?.showsActivityIndicator = false
+    }
+    
 }
 
 // MARK: Style and Layot
@@ -128,7 +138,9 @@ extension LoginViewController {
         
         if username == "Kevin" && password == "Welcome" {
             signInButton.configuration?.showsActivityIndicator = true
-            delegate?.didLogin()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+                self.delegate?.didLogin()
+            })
         } else {
             configureView(withMessage: "Username / password isn't correct")
         }
@@ -138,6 +150,5 @@ extension LoginViewController {
         errorMessageLabel.text = message
         errorMessageLabel.isHidden = false
     }
-    
     
 }
