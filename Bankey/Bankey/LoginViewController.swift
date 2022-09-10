@@ -6,6 +6,11 @@
 //
 
 import UIKit
+// protocol delegate pattern video # 34
+protocol LoginViewControllerDelegate: AnyObject {
+//    func didLogin(_ sender: LoginViewController) // pass data
+    func didLogin()
+}
 
 class LoginViewController: UIViewController {
     
@@ -14,6 +19,8 @@ class LoginViewController: UIViewController {
     let loginView = LoginView()
     let signInButton = UIButton(type: .system)
     let errorMessageLabel = UILabel()
+    // avoid retain cycles
+    weak var delegate: LoginViewControllerDelegate?
     
     var username: String? {
         return loginView.usernameTextField.text
@@ -121,6 +128,7 @@ extension LoginViewController {
         
         if username == "Kevin" && password == "Welcome" {
             signInButton.configuration?.showsActivityIndicator = true
+            delegate?.didLogin()
         } else {
             configureView(withMessage: "Username / password isn't correct")
         }
