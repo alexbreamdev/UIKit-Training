@@ -47,7 +47,7 @@ class LoginViewController: UIViewController {
     
 }
 
-// MARK: Style and Layot
+// MARK: Style and Layout
 extension LoginViewController {
     
     private func style() {
