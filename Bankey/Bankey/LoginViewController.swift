@@ -148,13 +148,13 @@ extension LoginViewController {
             assertionFailure("Username and password must never be nil")
             return
         }
+        // FIXME: Uncomment
+//        if username.isEmpty || password.isEmpty {
+//            configureView(withMessage: "Username / password must not be empty")
+//            return
+//        }
         
-        if username.isEmpty || password.isEmpty {
-            configureView(withMessage: "Username / password must not be empty")
-            return
-        }
-        
-        if username == "Kevin" && password == "Welcome" {
+        if username == "" && password == "" {
             signInButton.configuration?.showsActivityIndicator = true
             DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
                 self.delegate?.didLogin()
