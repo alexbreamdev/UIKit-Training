@@ -12,6 +12,8 @@
 		2F52173228CBA022008EB761 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F52173128CBA022008EB761 /* OnboardingContainerViewController.swift */; };
 		2F52173428CBBAAA008EB761 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F52173328CBBAAA008EB761 /* OnboardingViewController.swift */; };
 		2FB8BB1E28DB11CD006AE9B8 /* ShakeyBellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8BB1D28DB11CD006AE9B8 /* ShakeyBellView.swift */; };
+		2FB9659228DDF291000DF148 /* ProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB9659128DDF291000DF148 /* ProfileTests.swift */; };
+		2FB9659428DDF42C000DF148 /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB9659328DDF42C000DF148 /* AccountTests.swift */; };
 		2FBA838F28D9B6B800979364 /* NSNotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBA838E28D9B6B800979364 /* NSNotificationName.swift */; };
 		2FBA839128D9B90000979364 /* UITextField+SecureToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBA839028D9B90000979364 /* UITextField+SecureToggle.swift */; };
 		2FBECA9828D2440900580C25 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBECA9728D2440900580C25 /* CurrencyFormatter.swift */; };
@@ -49,6 +51,8 @@
 		2F52173128CBA022008EB761 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
 		2F52173328CBBAAA008EB761 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		2FB8BB1D28DB11CD006AE9B8 /* ShakeyBellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeyBellView.swift; sourceTree = "<group>"; };
+		2FB9659128DDF291000DF148 /* ProfileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTests.swift; sourceTree = "<group>"; };
+		2FB9659328DDF42C000DF148 /* AccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
 		2FBA838E28D9B6B800979364 /* NSNotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotificationName.swift; sourceTree = "<group>"; };
 		2FBA839028D9B90000979364 /* UITextField+SecureToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+SecureToggle.swift"; sourceTree = "<group>"; };
 		2FBECA9728D2440900580C25 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
@@ -92,7 +96,8 @@
 		2F15480628D8BDD000BA4CF9 /* BankeyUnitTests */ = {
 			isa = PBXGroup;
 			children = (
-				2F15480E28D8BE6700BA4CF9 /* CurrencyFormatterTests.swift */,
+				2FB9659028DDF272000DF148 /* AccountSummary */,
+				2FB9658F28DDF263000DF148 /* Utils */,
 			);
 			path = BankeyUnitTests;
 			sourceTree = "<group>";
@@ -112,6 +117,23 @@
 				2FB8BB1D28DB11CD006AE9B8 /* ShakeyBellView.swift */,
 			);
 			name = Components;
+			sourceTree = "<group>";
+		};
+		2FB9658F28DDF263000DF148 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2F15480E28D8BE6700BA4CF9 /* CurrencyFormatterTests.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		2FB9659028DDF272000DF148 /* AccountSummary */ = {
+			isa = PBXGroup;
+			children = (
+				2FB9659128DDF291000DF148 /* ProfileTests.swift */,
+				2FB9659328DDF42C000DF148 /* AccountTests.swift */,
+			);
+			path = AccountSummary;
 			sourceTree = "<group>";
 		};
 		2FCC79D528CC8F940049EBE0 /* Utils */ = {
@@ -312,6 +334,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F15480F28D8BE6700BA4CF9 /* CurrencyFormatterTests.swift in Sources */,
+				2FB9659428DDF42C000DF148 /* AccountTests.swift in Sources */,
+				2FB9659228DDF291000DF148 /* ProfileTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
